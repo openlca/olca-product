@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="openLCA" uid="org.openlca.olca-app.lcaproduct" id="org.openlca.olca-app.lcaproduct" application="org.openlca.app.Application" version="1.7.0.qualifier" useFeatures="true" includeLaunchers="true">
+
+   <aboutInfo>
+      <image path="/olca-app/icons/about.png"/>
+      <text>
+         %productAbout
+      </text>
+   </aboutInfo>
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <programArgs>-nl en
+      </programArgs>
+      <vmArgs>-Dosgi.framework.extensions=org.eclipse.fx.osgi
+-Dorg.osgi.framework.system.packages.extra=sun.misc
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+-DlogToConsole
+-Dlogback.configurationFile=C:/Java/Projects-e4/com.e1c.link.agent/agent-product/logback-test.xml
+-Dsun.net.spi.nameservice.nameservers=127.0.0.1
+-Dsun.net.spi.nameservice.provider.1=dns,sun
+      </vmArgsMac>
+      <vmArgsWin>-Dorg.osgi.framework.os.name=win32
+      </vmArgsWin>
+   </launcherArgs>
+
+   <windowImages/>
+
+   <splash
+      location="org.openlca.olca-app" />
+   <launcher name="openLCA">
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+      <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8</windows>
+   </vm>
+
+   <license>
+        <text>
+   %license
+         </text>
+   </license>
+
+   <plugins>
+   </plugins>
+
+   <features>
+      <feature id="org.eclipse.e4.rcp"/>
+      <feature id="org.eclipse.emf.ecore"/>
+      <feature id="org.eclipse.emf.common"/>
+      <feature id="org.eclipse.equinox.p2.extras.feature"/>
+      <feature id="org.eclipse.ecf.core.feature"/>
+      <feature id="org.eclipse.ecf.core.ssl.feature"/>
+      <feature id="org.eclipse.ecf.filetransfer.feature"/>
+      <feature id="org.eclipse.ecf.filetransfer.ssl.feature"/>
+      <feature id="org.eclipse.ecf.filetransfer.httpclient4.feature"/>
+      <feature id="org.eclipse.ecf.filetransfer.httpclient4.ssl.feature"/>
+      <feature id="org.eclipse.equinox.compendium.sdk"/>
+      <feature id="org.openlca.feature.core"/>
+      <feature id="org.openlca.feature.app"/>
+      <feature id="org.eclipse.platform"/>
+      <feature id="org.eclipse.equinox.p2.user.ui"/>
+      <feature id="org.eclipse.help"/>
+      <feature id="org.eclipse.equinox.p2.core.feature"/>
+      <feature id="org.eclipse.rcp"/>
+      <feature id="org.eclipse.equinox.p2.rcp.feature"/>
+      <feature id="org.eclipse.fx.target.rcp.feature" version="2.4.0.201605121035"/>
+      <feature id="org.eclipse.persistence.jpa" version="2.6.4.v20160829-44060b6"/>
+      <feature id="org.eclipse.nebula.widgets.tablecombo.feature"/>
+      <feature id="org.eclipse.mylyn.commons"/>
+   </features>
+
+   <configurations>
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.cm" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="3" />
+      <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+   </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
+
+</product>
