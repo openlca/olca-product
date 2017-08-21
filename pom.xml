@@ -50,7 +50,7 @@
 		</dependency>
 		
 		
-		<!-- OLCA core 
+		<!-- OLCA core -->
 		<dependency>
 			<groupId>org.openlca</groupId>
 			<artifactId>org.openlca.olca-formula</artifactId>
@@ -95,7 +95,19 @@
 		</dependency>
 		<dependency>
 			<groupId>org.openlca</groupId>
+			<artifactId>org.openlca.olca-io</artifactId>
+			<version>${olca.core.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.openlca</groupId>
 			<artifactId>org.openlca.olca-geo</artifactId>
+			<version>${olca.core.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.openlca</groupId>
+			<artifactId>org.openlca.olca-simapro-csv</artifactId>
 			<version>${olca.core.version}</version>
 			<scope>provided</scope>
 		</dependency>
@@ -122,7 +134,6 @@
 			<classifier>p2artifacts</classifier>
 			<type>xml</type>
 		</dependency>
-	-->	
 	
 	</dependencies>
 
@@ -154,7 +165,7 @@
 				<artifactId>target-platform-configuration</artifactId>
 				<version>${tycho-version}</version>
 				<configuration>
-					<!-- pomDependencies>consider</pomDependencies -->
+					<pomDependencies>consider</pomDependencies>
 					<target>
 						<artifact>
 							<groupId>org.openlca.releng</groupId>
@@ -221,14 +232,14 @@
 		<snapshotRepository>
 			<id>olca-repo</id>
 			<name>OpenLCA Nexus at OpenShift</name>
-			<url>https://nexus-olca.a3c1.starter-us-west-1.openshiftapps.com/nexus/content/repositories/snapshots/</url>
+			<url>http://ec2-54-90-248-145.compute-1.amazonaws.com:8081/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 	<repositories>
 		<repository>
-			<id>olca-public-repo</id>
+			<id>olca-repo</id>
 			<name>OpenLCA Nexus at OpenShift</name>
-			<url>https://nexus-olca.a3c1.starter-us-west-1.openshiftapps.com/nexus/content/groups/public/</url>
+			<url>http://ec2-54-90-248-145.compute-1.amazonaws.com:8081/nexus/content/repositories/snapshots/</url>
 		</repository>
 	</repositories>
 </project>
