@@ -1,6 +1,7 @@
 ## Preface
-The purpose of this re-factoring is to enable product building *in one click*. Before that the application was indeed a *plain single jar*, where all modules and working libraries resided. This solution doesn't use the most powerful approach provided by Eclipse RCP out of the box &ndash; *OSGi*. The downsides of the previous design are:
-- long workflow (for example when you make ammedments in some olca-module, then you have to install its Maven artifact and then copy to `lib` directory of `olca-app`)
+The purpose of this re-factoring is to enable product building *in one click*. Before that the application was indeed a *plain single jar* in Eclipse RCP, where all modules and working libraries resided. The previous solution didn't use the most powerful approach provided by Eclipse RCP out of the box &ndash; *OSGi*. The downsides of the previous design were:
+
+- long workflow (for example when you make amendments in some `olca-modules`, then you had to install it's Maven artifact and then copy to `lib` directory of `olca-app`
 - inability to update just a part of bundle
 
 ## What was done
@@ -23,8 +24,7 @@ mvn
 Then open `olca-product\target\products\org.openlca.olca-app.lcaproduct\win32\win32` and choose your `arch` (x86 or
 x86_64), depending on what Java (32-bit or 64-bit) is installed on your computer. Double-click on `OpenLCA.exe`.
 
-The application start but is not fully-fledged - a class-loading issue since osgi-fying with EclipseLink JPA - I presume it can be resolved
-with some Java code adjustments and [Eclipse Gemini JPA project](https://www.eclipse.org/gemini/jpa/). There are also possible class-loading issues with Jython, GeoTools, that may arise after fixing JPA.  
+The application start but is not fully-fledged - a class-loading issue with EclipseLink JPA, because we are in OSGi now -  it can be resolved with some Java code adjustments and [Eclipse Gemini JPA project](https://www.eclipse.org/gemini/jpa/). There are also possible class-loading issues with Jython and GeoTools that may arise after fixing JPA.  
 
 
 ##### Work in Eclipse IDE
