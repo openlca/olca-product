@@ -38,7 +38,7 @@ Please, follow the instruction very thoroughly!
     - in the editor there is a link `Set as Target Platform` &mdash; click on it! From now all that will be imported to Eclipse IDE is using it for resolving dependencies.
 2. Import core modules:
     - `git clone -b tycho-releng https://github.com/denis-kalinin/olca-modules.git`
-    - `cd olca-modules`
+    - `cd olca-modules/olca-core`
     - `mvn dependency:copy` - to download some jars that, alas for now, are to be embedded in some artifacts (EclipseLink)
     - Import -> General -> Existing Projects into Workspace
 3. Import `olca-updates`
