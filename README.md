@@ -40,7 +40,7 @@ Please, follow the instruction very thoroughly!
     - `git clone -b tycho-releng https://github.com/denis-kalinin/olca-modules.git`
     - `cd olca-modules/olca-core`
     - `mvn dependency:copy` - to download some jars that, alas for now, are to be embedded in some artifacts (EclipseLink)
-    - Import -> General -> [Existing Projects into Workspace](docs/images/olca-modules.png)
+    - Import -> General -> [Existing Projects into Workspace](docs/olca-modules.md)
 3. Import `olca-updates`
     - `git clone -b tycho-releng https://github.com/denis-kalinin/olca-updates.git`
     - `cd olca-updates`
@@ -50,7 +50,7 @@ Please, follow the instruction very thoroughly!
     - `git clone -b tycho-releng https://github.com/denis-kalinin/olca-app.git`
     - `cd olca-app/olca-app`
     - `mvn dependency:copy` - to download and embed jython-standalone.jar
-    - Import -> General -> [Existing Projects into Workspace](docs/images/olca-app.pnd)
+    - Import -> General -> [Existing Projects into Workspace](docs/olca-app.md)
 5. HTML content for `olca-app` from `olca-app-html` (it is possible to remove this step, but implies some job for 2-3 days)
    - [follow instructions to generate and copy HTML files](https://github.com/denis-kalinin/olca-app/tree/master/olca-app-html)
 6. Import `olca-app-feature`
@@ -59,7 +59,7 @@ Please, follow the instruction very thoroughly!
 7. Import `olca-product`
     - `git clone https://github.com/denis-kalinin/olca-product.git`
     - Import -> Maven -> Existing Maven projects
-    - if project is marked with red, then [adjust it](docs/images/olca-proudct.png)
+    - if project is marked with red, then [adjust it](docs/olca-proudct.md)
 8. Now you SHOULD be ready to start OLCA from Eclipse IDE
     - double-click on `olca-product/olca.product`
     - Press on `Synchronize`
