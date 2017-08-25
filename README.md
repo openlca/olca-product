@@ -59,7 +59,7 @@ Please, follow the instruction very thoroughly!
 7. Import `olca-product`
     - `git clone https://github.com/denis-kalinin/olca-product.git`
     - Import -> Maven -> Existing Maven projects
-    - if project is marked with red, then [adjust it](docs/olca-proudct.md)
+    - if project is marked with red, then [adjust it](docs/olca-product.md)
 8. Now you SHOULD be ready to start OLCA from Eclipse IDE
     - double-click on `olca-product/olca.product`
     - Press on `Synchronize`
