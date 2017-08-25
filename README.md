@@ -15,7 +15,7 @@ The purpose of this re-factoring is to enable product building *in one click*. B
 #### How to build OpenLCA application
 ##### The easiest way
 ```
-git clone olca-product
+git clone https://github.com/denis-kalinin/olca-product.git
 cd olca-proudct
 mvn
 ```
@@ -51,7 +51,7 @@ Please, follow the instruction very thoroughly!
     - `cd olca-app/olca-app`
     - `mvn dependency:copy` - to download and embed jython-standalone.jar
     - Import -> General -> [Existing Projects into Workspace](docs/olca-app.md)
-5. HTML content for `olca-app` from `olca-app-html` (it is possible to remove this step, but implies some job for 2-3 days)
+5. HTML content for `olca-app` from `olca-app-html`
    - [follow instructions to generate and copy HTML files](https://github.com/denis-kalinin/olca-app/tree/master/olca-app-html)
 6. Import `olca-app-feature`
     - `git clone https://github.com/denis-kalinin/olca-app-feature.git`
@@ -64,3 +64,8 @@ Please, follow the instruction very thoroughly!
     - double-click on `olca-product/olca.product`
     - Press on `Synchronize`
     - then `Launch an Eclipse application`
+    
+###### Possible improvements
+- `mvn dependency:copy` will be removed if we OSGi-fy JPA and Jython
+- step 5 could be removed if HTML-build will be handled by Maven (implies some job for 2-3 days)
+- steps 3-6 could be merged if GitHub repository layout is changed accordingly
