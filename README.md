@@ -1,5 +1,5 @@
 ## Preface
-The purpose of this re-factoring is to enable product building *in one click*. Before that the application was indeed a *plain single jar* in Eclipse RCP, where all modules and working libraries resided. The previous solution didn't use the most powerful approach provided by Eclipse RCP out of the box &ndash; *OSGi*. The downsides of the previous design were:
+The purpose of this re-factoring is to enable product building *in one click*. Before that the application was indeed a *plain single jar* within Eclipse RCP, where all modules and working libraries resided. The previous solution didn't use the most powerful approach provided by Eclipse RCP out of the box &ndash; *OSGi*. The downsides of the previous design were:
 
 - long workflow (for example when you make amendments in some `olca-modules`, then you had to install it's Maven artifact and then copy to `lib` directory of `olca-app`
 - inability to update just a part of bundle
@@ -20,7 +20,7 @@ git clone https://github.com/denis-kalinin/olca-product.git
 cd olca-proudct
 mvn
 ```
-&mdash; under the hood it fetches everything from `download.eclipse.org` sites, our P2 and out Maven repositories.
+&mdash; under the hood it fetches everything from `download.eclipse.org` sites, our P2 and our Maven snapshot repositories.
 Then open `olca-product\target\products\org.openlca.olca-app.lcaproduct\win32\win32` and choose your `arch` (x86 or
 x86_64), depending on what Java (32-bit or 64-bit) is installed on your computer. Double-click on `OpenLCA.exe`.
 
@@ -61,11 +61,12 @@ Please, follow the instruction very thoroughly!
     - Import -> Maven -> Existing Maven projects
     - if project is marked with red, then [adjust it](docs/olca-product.md)
 8. Now you SHOULD be ready to start OLCA from Eclipse IDE
-    - double-click on `olca-product/olca.product`
-    - Press on `Synchronize`
+    - double-click on `olca-product/olca.product`- the product definition editor will open
+    - Press on `Synchronize` button in editor' view
     - then `Launch an Eclipse application`
     
 ###### Possible improvements
 - `mvn dependency:copy` will be removed if we OSGi-fy JPA and Jython
 - step 5 could be removed if HTML-build will be handled by Maven (implies some job for 2-3 days)
 - steps 3-6 could be merged if GitHub repository layout is changed accordingly
+- Java (JRE) can be embedded for particular OS while building with Tycho
