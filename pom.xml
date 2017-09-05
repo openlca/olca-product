@@ -19,12 +19,6 @@
 			<version>${olca.app.version}</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.openlca</groupId>
-			<artifactId>org.openlca.olca-updates</artifactId>
-			<version>${olca.app.version}</version>
-			<scope>provided</scope>
-		</dependency>
 		<!-- OLCA app feature -->
 		<dependency>
 			<groupId>org.openlca</groupId>
@@ -44,92 +38,6 @@
 			<groupId>org.openlca</groupId>
 			<artifactId>org.openlca.feature.app</artifactId>
 			<version>${olca.app.version}</version>
-			<scope>provided</scope>
-			<classifier>p2artifacts</classifier>
-			<type>xml</type>
-		</dependency>
-		
-		
-		<!-- OLCA core -->
-		<dependency>
-			<groupId>org.openlca</groupId>
-			<artifactId>org.openlca.olca-formula</artifactId>
-			<version>${olca.core.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.openlca</groupId>
-			<artifactId>org.openlca.olca-core</artifactId>
-			<version>${olca.core.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.openlca</groupId>
-			<artifactId>org.openlca.olca-ilcd</artifactId>
-			<version>${olca.core.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.openlca</groupId>
-			<artifactId>org.opnelca.olca-jsonld</artifactId>
-			<version>${olca.core.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.openlca</groupId>
-			<artifactId>org.openlca.ecospold</artifactId>
-			<version>${olca.core.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.openlca</groupId>
-			<artifactId>org.openlca.olca-ecospold-2</artifactId>
-			<version>${olca.core.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.openlca</groupId>
-			<artifactId>org.openlca.olca-cloud</artifactId>
-			<version>${olca.core.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.openlca</groupId>
-			<artifactId>org.openlca.olca-io</artifactId>
-			<version>${olca.core.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.openlca</groupId>
-			<artifactId>org.openlca.olca-geo</artifactId>
-			<version>${olca.core.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.openlca</groupId>
-			<artifactId>org.openlca.olca-simapro-csv</artifactId>
-			<version>${olca.core.version}</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.openlca</groupId>
-			<artifactId>org.openlca.feature.core</artifactId>
-			<version>${olca.core.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.openlca</groupId>
-			<artifactId>org.openlca.feature.core</artifactId>
-			<version>${olca.core.version}</version>
-			<scope>provided</scope>
-			<classifier>p2metadata</classifier>
-			<type>xml</type>
-		</dependency>
-		<dependency>
-			<groupId>org.openlca</groupId>
-			<artifactId>org.openlca.feature.core</artifactId>
-			<version>${olca.core.version}</version>
 			<scope>provided</scope>
 			<classifier>p2artifacts</classifier>
 			<type>xml</type>
