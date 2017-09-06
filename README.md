@@ -4,9 +4,8 @@ The purpose of this re-factoring is to enable product building *in one click*. I
 ## What was done
 1. Eclipse Tycho and Eclipse PDE share the common concept of the `target.platform`, but with the clause that Tycho supports only remote URLs as P2 repository. For that reason I have created a number of own P2 repositories for deprecated versions of Eclipse.org projects (like GEF, Equinox Executor). I didn't include Babel_eclipse - because it has very-very many dependencies to resolve. Also, Tycho can automatically choose native bundles (depending on OS) if product configuration is based on features (not on plugin-ins) - so, I redefined [product configuration](olca.product)
 2. `olca-modules` and `olca-updates` are changed to version 1.7.0-SNAPSHOT
-3. grouping `olca-modules` in Eclipse Feature ([olca.feature.core](https://github.com/denis-kalinin/olca-modules/tree/tycho-releng/olca-core-feature))
-4. `olca-app-feature` is parent module for `olca-app` and the Eclipse feature embracing it.
-5. The new design supports *duality*, i.e. you can run and build application both in PDE and Tycho. To build in PDE - projects from `olca-target-runtime`, `olca-app-feature`, `olca-product` should be imported in Eclipse IDE. For Tycho-building the current version of `olca-modules` and `olca-updates` artifacts should be already deployed in [our Maven Snapshot repository](http://ec2-54-90-248-145.compute-1.amazonaws.com:8081/nexus/) or locally installed.
+3. `olca-app-feature` is parent module for `olca-app` and the Eclipse feature embracing it.
+4. The new design supports *duality*, i.e. you can run and build application both in PDE and Tycho. To build in PDE - projects from `olca-target-runtime`, `olca-app-feature`, `olca-product` should be imported in Eclipse IDE. For Tycho-building the current version of `olca-modules` and `olca-updates` artifacts should be already deployed in [our Maven Snapshot repository](http://ec2-54-90-248-145.compute-1.amazonaws.com:8081/nexus/) or locally installed.
 
 
 #### How to build OpenLCA application
