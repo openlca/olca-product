@@ -51,7 +51,7 @@ Your Eclipse IDE - *SHOULD* be PDE + e(fx)clipse installed, search Eclipse Marke
 When OpenLCA started from IDE - an exception may appear in console:
 
 ```
-Caused by: java.lang.ClassNotFoundException: javafx.embed.swt.FXCanvas cannot be found by org.openlca.olca-app_1.7.0.qualifier
+java.lang.ClassNotFoundException: org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon cannot be found
 ```
 
-&mdash; well, you need somehow to make your IDE to regard `JAVA-HOME/lib/jfxswt.jar` - read, for example, [Creating SWT-JavaFX Applications in an IDE](https://docs.oracle.com/javase/8/javafx/interoperability-tutorial/fx-swt_interoperability.htm)
+&mdash; maybe ignored as they are specific to IDE-run and not in real app.

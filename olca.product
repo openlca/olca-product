@@ -6,7 +6,7 @@
    <aboutInfo>
       <image path="/olca-product/icons/about.png"/>
       <text>
-         %productAbout
+         openLCA 1.7.0
       </text>
    </aboutInfo>
 
@@ -16,13 +16,11 @@
    <launcherArgs>
       <programArgs>-nl en
       </programArgs>
-      <vmArgs>-Dorg.osgi.framework.bundle.parent=ext
+      <vmArgs>-Dosgi.framework.extensions=org.eclipse.fx.osgi
 -Dorg.osgi.framework.system.packages.extra=sun.misc
 -Dpython.console.encoding=UTF-8
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
--DlogToConsole
--Dlogback.configurationFile=C:/Java/Projects-e4/com.e1c.link.agent/agent-product/logback-test.xml
 -Dsun.net.spi.nameservice.nameservers=127.0.0.1
 -Dsun.net.spi.nameservice.provider.1=dns,sun
       </vmArgsMac>
@@ -30,14 +28,20 @@
       </vmArgsWin>
    </launcherArgs>
 
-   <windowImages/>
+   <windowImages i16="/olca-product/icons/logo/16_32bit.png" i32="/olca-product/icons/logo/32_32bit.png" i48="/olca-product/icons/logo/48_32bit.png" i64="/olca-product/icons/logo/64.png" i128="/olca-product/icons/logo/128.png"/>
 
    <splash
       location="org.openlca.olca-app" />
    <launcher name="openLCA">
       <solaris/>
       <win useIco="false">
-         <bmp/>
+         <bmp
+            winSmallHigh="/olca-product/icons/logo/16_32bit.bmp"
+            winSmallLow="/olca-product/icons/logo/16_8bit.bmp"
+            winMediumHigh="/olca-product/icons/logo/32_32bit.bmp"
+            winMediumLow="/olca-product/icons/logo/32_8bit.bmp"
+            winLargeHigh="/olca-product/icons/logo/48_32bit.bmp"
+            winLargeLow="/olca-product/icons/logo/48_8bit.bmp"/>
       </win>
    </launcher>
 

@@ -1,4 +1,5 @@
 target/
 /.settings/
+/workspace/
 .project
 olca.p2.inf
