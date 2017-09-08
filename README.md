@@ -12,11 +12,12 @@ The purpose of this re-factoring is to enable product building *in one click*. I
 ##### The easiest way
 - assuming olca-modules and ocla-updates are already deployed on Maven snapshot repo
 - assuming olca-app-feature is already deployed on Maven snapshot repo
+- Java 8 installed
 
 ```
 git clone https://github.com/openlca/olca-product.git
 cd olca-proudct
-mvn
+mvnw
 ```
 
 &mdash; under the hood it fetches everything from `download.eclipse.org` sites, our P2 and our Maven snapshot repositoriy.
